@@ -332,11 +332,15 @@
 	hydra:entrypoint "https://tsunamiarchive.ingv.it"^^xsd:anyURI ;
 	schema:provider <PIC:999472675> ;
 	schema:datePublished "2019-07-19T18:08:53Z"^^xsd:dateTime ;
-        dct:spatial <http://www.w3.org/ns/Location_webservice> ;
+        dct:spatial [ a dct:Location;
+		locn:geometry "POLYGON((-56.3000030517578 28.2829990386963,-56.3000030517578 69.8170013427734,41 69.8170013427734,41 28.2829990386963,-56.3000030517578 28.2829990386963))"^^gsp:wktLiteral;
+	];
 	hydra:supportedOperation <http://www.w3.org/ns/Operation-EMTC_V2_Full_Dataset>;
 	schema:keywords "catalog" , "runup" , "run-up" , "tsunami" , "tsunami effects" , "catalogue" , "inundation" ;
 	dct:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI;
-	dct:temporal <http://www.w3.org/ns/Period_of_Time_Webservice> ;
-     dcat:contactPoint <http://www.w3.org/ns/Manager_contact1> ;
+	dct:temporal [ a dct:PeriodOfTime;
+		schema:startDate "2019-07-19T18:25:40Z"^^xsd:dateTime;
+	];
+        dcat:contactPoint <http://www.w3.org/ns/Manager_contact1> ;
 	dct:conformsTo <https://www.epos-eu.org/epos-dcat-ap/ApiDocumentation/54723697-fbb5-43a6-a7f3-5f7b4f9ef2fa> ;
 .
