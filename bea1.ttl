@@ -289,7 +289,7 @@
 <http://www.w3.org/ns/EMTCv2_Full_Dataset>
         a                dcat:Distribution , dcat:distribution ;
         dct:conformsTo   <http://www.w3.org/ns/Tsunami/EMTC_v2> ;
-        dct:description  "A unified catalogue containing tsunamis generated in the European and Mediterranean seas since 6150 B.C. to current days. The Catalogue of Euro-Mediterranean Tsunamis (EMTC2.0), realized in ArcGis online, contains 293 tsunamis and is the updated version of EMTC published in 2014.The Italian section of the database was revised in order to implement the new database of tsunami effects along the Italian coasts (ITED). In order to improve the quality of the data, all the Italian tsunamis of seismic origin have been linked to the Parametric Catalogue of Italian Earthquakes (CPTI15) adopted as the reference earthquake catalogue.In the EMTC2.0 two new tsunami events were added, more information enriched the knowledge on the tsunamis present in the Italian section and, accordingly to the new achieved info, some tsunami parameters, such as the reliability, intensity, generating cause, etc. have changed.ITED and EMTCv2 are interconnected and they can be accessed through a purpose-built WebApp that allows the user to easily switch from one database to another. EMTC is interoperable with the database of the Italian Archive of Historical Earthquake Data (ASMI)." ;
+        dct:description  "AAAA unified catalogue containing tsunamis generated in the European and Mediterranean seas since 6150 B.C. to current days. The Catalogue of Euro-Mediterranean Tsunamis (EMTC2.0), realized in ArcGis online, contains 293 tsunamis and is the updated version of EMTC published in 2014.The Italian section of the database was revised in order to implement the new database of tsunami effects along the Italian coasts (ITED). In order to improve the quality of the data, all the Italian tsunamis of seismic origin have been linked to the Parametric Catalogue of Italian Earthquakes (CPTI15) adopted as the reference earthquake catalogue.In the EMTC2.0 two new tsunami events were added, more information enriched the knowledge on the tsunamis present in the Italian section and, accordingly to the new achieved info, some tsunami parameters, such as the reliability, intensity, generating cause, etc. have changed.ITED and EMTCv2 are interconnected and they can be accessed through a purpose-built WebApp that allows the user to easily switch from one database to another. EMTC is interoperable with the database of the Italian Archive of Historical Earthquake Data (ASMI)." ;
         dct:format       "http://publications.europa.eu/resource/authority/file-type/JSON"^^xsd:anyURI ;
         dct:identifier   "http://www.w3.org/ns/EMTCv2_Full_Dataset" ;
         dct:issued       "2019-05-02T10:44:10Z"^^xsd:dateTime ;
@@ -332,7 +332,7 @@
 	hydra:entrypoint "https://tsunamiarchive.ingv.it"^^xsd:anyURI ;
 	schema:provider <PIC:999472675> ;
 	schema:datePublished "2019-07-19T18:08:53Z"^^xsd:dateTime ;
-     dct:spatial <http://www.w3.org/ns/Location_webservice> ;
+        dct:spatial <http://www.w3.org/ns/Location_webservice> ;
 	hydra:supportedOperation <http://www.w3.org/ns/Operation-EMTC_V2_Full_Dataset>;
 	schema:keywords "catalog" , "runup" , "run-up" , "tsunami" , "tsunami effects" , "catalogue" , "inundation" ;
 	dct:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI;
