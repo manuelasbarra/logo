@@ -161,7 +161,7 @@
         hydra:required   false ;
         hydra:variable   "maxlatitude" .
 
-<https://www.epos-eu.org/epos-dcat-ap#Concept/55d3ff80-aac5-4478-b743-7643ba75fec2>
+<https://www.epos-eu.org/epos-dcat-ap/Concept/55d3ff80-aac5-4478-b743-7643ba75fec2>
         a                skos:Concept , dcat:theme ;
         skos:definition  "EMTC_v2" ;
         skos:inScheme    <epos:Tsunami> ;
@@ -211,7 +211,7 @@
         adms:identifier    <http://www.w3.org/ns/Identifier_DOI> , <http://www.w3.org/ns/Identifier_PIC> ;
         dcat:contactPoint  <http://www.w3.org/ns/Scientific_Contact2> , <http://www.w3.org/ns/Scientific_Contact1> , <http://www.w3.org/ns/Scientific_Contact3> ;
         dcat:distribution  <http://www.w3.org/ns/EMTCv2_Full_Dataset> ;
-        dcat:theme         <https://www.epos-eu.org/epos-dcat-ap#Concept/55d3ff80-aac5-4478-b743-7643ba75fec2> .
+        dcat:theme         <https://www.epos-eu.org/epos-dcat-ap/Concept/55d3ff80-aac5-4478-b743-7643ba75fec2> .
 
 <http://www.w3.org/ns/max_lon_EMTCv2>
         a                hydra:mapping , hydra:IriTemplateMapping ;
@@ -327,7 +327,7 @@
 <http://www.w3.org/ns/Tsunami/EMTC_v2> a epos:WebService;
 	schema:identifier "http://www.w3.org/ns/Tsunami/EMTC_v2" ;
 	schema:description "These web services provide both map layers and vectorial data of the EMTC_v2 dataset. They are implemented according to the OGC (Open Geospatial Consortium) standard Web Map Service - WMS (1.1.1, 1.3.0)";
-        dcat:theme <https://www.epos-eu.org/epos-dcat-ap#Concept/55d3ff80-aac5-4478-b743-7643ba75fec2> ;
+        dcat:theme <https://www.epos-eu.org/epos-dcat-ap/Concept/55d3ff80-aac5-4478-b743-7643ba75fec2> ;
 	schema:name "Euro-Mediterranean Tsunami Catalogue (EMTC)" ;
 	hydra:entrypoint "https://tsunamiarchive.ingv.it"^^xsd:anyURI ;
 	schema:provider <PIC:999472675> ;
