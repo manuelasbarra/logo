@@ -114,7 +114,7 @@
         hydra:required       true ;
         hydra:variable       "srsName" .
 
-<https://www.epos-eu.org/epos-dcat-ap#ApiDocumentation/54723697-fbb5-43a6-a7f3-5f7b4f9ef2fa>
+<https://www.epos-eu.org/epos-dcat-ap/ApiDocumentation/54723697-fbb5-43a6-a7f3-5f7b4f9ef2fa>
         a                  hydra:ApiDocumentation , dct:conformsTo ;
         hydra:description  "Test" ;
         hydra:entrypoint   "https://tsunamiarchive.ingv.it"^^xsd:anyURI ;
@@ -338,5 +338,5 @@
 	dct:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI;
 	dct:temporal <http://www.w3.org/ns/Period_of_Time_Webservice> ;
      dcat:contactPoint <http://www.w3.org/ns/Manager_contact1> ;
-	dct:conformsTo <https://www.epos-eu.org/epos-dcat-ap#ApiDocumentation/54723697-fbb5-43a6-a7f3-5f7b4f9ef2fa> ;
+	dct:conformsTo <https://www.epos-eu.org/epos-dcat-ap/ApiDocumentation/54723697-fbb5-43a6-a7f3-5f7b4f9ef2fa> ;
 .
