@@ -1,0 +1,341 @@
+@prefix :      <https://www.epos-eu.org/epos-dcat-ap#> .
+@prefix schema: <http://schema.org/> .
+@prefix spdx:  <http://spdx.org/rdf/terms#> .
+@prefix gsp:   <http://www.opengis.net/ont/geosparql#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix hydra: <http://www.w3.org/ns/hydra/core#> .
+@prefix geo:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix locn:  <http://www.w3.org/ns/locn#> .
+@prefix dcat:  <http://www.w3.org/ns/dcat#> .
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix epos:  <https://www.epos-eu.org/epos-dcat-ap#> .
+@prefix adms:  <http://www.w3.org/ns/adms#> .
+@prefix org:   <http://www.w3.org/ns/org#> .
+@prefix cnt:   <http://www.w3.org/2011/content#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix http:  <http://www.w3.org/2006/http#> .
+@prefix dash:  <http://datashapes.org/dash#> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+
+<http://www.w3.org/ns/count_WFS>
+        a               hydra:mapping , hydra:IriTemplateMapping ;
+        rdfs:label      "Maximum number of features to retrieve" ;
+        rdfs:range      "xsd:string" ;
+        hydra:required  false ;
+        hydra:variable  "count" .
+
+<http://www.w3.org/ns/typeName_WFS>
+        a                    hydra:IriTemplateMapping ;
+        rdfs:label           "Feature layer to load" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "tsunami:EMTC_v2" ;
+        http:paramValue      "tsunami:EMTC_v2" ;
+        hydra:required       true ;
+        hydra:variable       "typeNames" .
+
+<http://www.w3.org/ns/Identifier_DOI>
+        a                  adms:identifier , adms:Identifier ;
+        skos:notation      "10.13127/tsunami/emtc.2.0" ;
+        adms:schemeAgency  "DOI" .
+
+<http://www.w3.org/ns/person_scientific_contact_2>
+        a                      schema:Person ;
+        schema:address         <http://www.w3.org/ns/INGV_roma> ;
+        schema:contactPoint    <http://www.w3.org/ns/Scientific_Contact2> ;
+        schema:email           "laura.graziani@ingv.it" ;
+        schema:familyName      "Graziani" ;
+        schema:givenName       "Laura" ;
+        schema:identifier      <http://www.w3.org/ns/orcid_contac2> ;
+        schema:qualifications  "Researcher" .
+
+<http://www.w3.org/ns/person_scientific_contact1>
+        a                    schema:Person ;
+        schema:address       <http://www.w3.org/ns/INGV_roma> ;
+        schema:contactPoint  <http://www.w3.org/ns/Scientific_Contact1> ;
+        schema:email         "alessandra.maramai@ingv.it" ;
+        schema:familyName    "Maramai" ;
+        schema:givenName     "Alessandra" ;
+        schema:identifier    <http://www.w3.org/ns/orcid_contact1> .
+
+<http://www.w3.org/ns/person_manager_contact>
+        a                      schema:Person ;
+        schema:address         <http://www.w3.org/ns/INGV_milano> ;
+        schema:contactPoint    <http://www.w3.org/ns/Manager_contact1> ;
+        schema:email           "mario.locati@ingv.it" ;
+        schema:familyName      "Locati" ;
+        schema:givenName       "Mario" ;
+        schema:identifier      <http://www.w3.org/ns/orcid_contact_manager> ;
+        schema:qualifications  "Technologist" .
+
+<http://www.w3.org/ns/Scientific_Contact1>
+        a                         schema:ContactPoint , dcat:contactPoint , schema:contactPoint ;
+        schema:availableLanguage  "it" , "en" ;
+        schema:contactType        "scientificContact" ;
+        schema:email              "alessandra.maramai@ingv.it" .
+
+<PIC:999472675>  a        schema:Organization , dct:publisher , schema:provider ;
+        schema:identifier [ a schema:PropertyValue ;
+        	schema:propertyID "PIC" ;
+        	schema:value "999472675" ;
+      	];
+        schema:address    <http://www.w3.org/ns/INGV_roma> ;
+        schema:email      "ufficiogestionedati@ingv.it" ;
+        schema:legalName  "Istituto Nazionale di Geofisica e Vulcanologia (INGV)" ;
+        schema:url        "www.ingv.it"^^xsd:anyURI .
+
+<http://www.w3.org/ns/Location_webservice>
+        a              dct:spatial , dct:Location ;
+        locn:geometry  "POLYGON((-56.3000030517578 28.2829990386963,-56.3000030517578 69.8170013427734,41 69.8170013427734,41 28.2829990386963,-56.3000030517578 28.2829990386963))"^^gsp:wktLiteral .
+
+<http://www.w3.org/ns/min_lon_EMTCv2>
+        a                hydra:mapping , hydra:IriTemplateMapping ;
+        rdfs:label       "Minimum longitude" ;
+        rdfs:range       "xsd:float" ;
+        schema:maxValue  "180" ;
+        schema:minValue  "-180" ;
+        http:paramValue  "-56.3000030517578" ;
+        hydra:property   "epos:westernmostLongitude" ;
+        hydra:required   false ;
+        hydra:variable   "minlongitude" .
+
+<http://www.w3.org/ns/srsName_WGS84>
+        a                    hydra:mapping , hydra:IriTemplateMapping ;
+        rdfs:label           "SRS to use" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "EPSG:4326" ;
+        http:paramValue      "EPSG:4326" ;
+        hydra:required       true ;
+        hydra:variable       "srsName" .
+
+<https://www.epos-eu.org/epos-dcat-ap#ApiDocumentation/54723697-fbb5-43a6-a7f3-5f7b4f9ef2fa>
+        a                  hydra:ApiDocumentation , dct:conformsTo ;
+        hydra:description  "Test" ;
+        hydra:entrypoint   "https://tsunamiarchive.ingv.it"^^xsd:anyURI ;
+        hydra:title        "Web Services documentation and metadata for EMTC" .
+
+<http://www.w3.org/ns/Manager_contact1>
+        a                         schema:contactPoint , dcat:contactPoint , schema:ContactPoint ;
+        schema:availableLanguage  "en" ;
+        schema:contactType        "manager" ;
+        schema:email              "mario.locati@ingv.it" .
+
+<http://www.w3.org/ns/version_WFS>
+        a                    hydra:IriTemplateMapping , hydra:mapping ;
+        rdfs:label           "Service version" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "2.0.0" ;
+        http:paramValue      "2.0.0" , "1.0.0" , "1.1.0" ;
+        hydra:required       true ;
+        hydra:variable       "version" .
+
+<http://www.w3.org/ns/orcid_contact1>
+        a                  schema:PropertyValue , schema:identifier ;
+        schema:propertyID  "orcid" ;
+        schema:value       "https://orcid.org/0000-0003-2797-9557" .
+
+<http://www.w3.org/ns/orcid_contact_manager>
+        a                  schema:PropertyValue , schema:identifier ;
+        schema:propertyID  "orcid" ;
+        schema:value       "http://orcid.org/0000-0003-2185-3267" .
+
+<http://www.w3.org/ns/Identifier_PIC>
+        a                  adms:Identifier , adms:identifier ;
+        skos:notation      "WP18-DDSS-002" ;
+        adms:schemeAgency  "DDSS-ID" .
+
+<http://www.w3.org/ns/max_lat_EMTCv2>
+        a                hydra:IriTemplateMapping , hydra:mapping ;
+        rdfs:label       "Maximum latitude" ;
+        rdfs:range       "xsd:float" ;
+        schema:maxValue  "180" ;
+        schema:minValue  "-180" ;
+        http:paramValue  "69.8170013427734" ;
+        hydra:property   "epos:northernmostLatitude" ;
+        hydra:required   false ;
+        hydra:variable   "maxlatitude" .
+
+<https://www.epos-eu.org/epos-dcat-ap#Concept/55d3ff80-aac5-4478-b743-7643ba75fec2>
+        a                skos:Concept , dcat:theme ;
+        skos:definition  "EMTC_v2" ;
+        skos:inScheme    <epos:Tsunami> ;
+        skos:prefLabel   "EMTC_v2" .
+
+<epos:Tsunami>  a        skos:ConceptScheme , skos:inScheme ;
+        dct:description  "It contains the concepts of Tsunami" ;
+        dct:title        "Tsunami" .
+
+<http://www.w3.org/ns/IriTemplate-EMTC_v2_Ful_Dataset>
+        a               hydra:property , hydra:IriTemplate ;
+        hydra:mapping   <http://www.w3.org/ns/max_lon_EMTCv2> , <http://www.w3.org/ns/Service_WFS> , <http://www.w3.org/ns/request_WFS> , <http://www.w3.org/ns/crs_WGS84> , <http://www.w3.org/ns/min_lat_EMTCv2> , <http://www.w3.org/ns/output_format_WFS> , <http://www.w3.org/ns/srsName_WGS84> , <http://www.w3.org/ns/typeName_WFS_EMTCv2> , <http://www.w3.org/ns/max_lat_EMTCv2> , <http://www.w3.org/ns/count_WFS> , <http://www.w3.org/ns/version_WFS> , <http://www.w3.org/ns/min_lon_EMTCv2> ;
+        hydra:template  "https://tsunamiarchive.ingv.it/services/tsunami/wfs/wfs{?service, version, request, typeNames, outputFormat}" .
+#        hydra:template  "https://tsunamiarchive.ingv.it/services/tsunami/wfs/wfs{?service, version, request, typeNames, srsName, #outputFormat}&bbox={minlatitude, minlongitude, maxlatitude, maxlongitude,crs}" .
+
+<http://www.w3.org/ns/Service_WFS>
+        a                    hydra:mapping , hydra:IriTemplateMapping ;
+        rdfs:label           "Service" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "WFS" ;
+        http:paramValue      "WFS" ;
+        hydra:required       true ;
+        hydra:variable       "service" .
+
+<http://www.w3.org/ns/output_format_WFS>
+        a                    hydra:IriTemplateMapping , hydra:mapping ;
+        rdfs:label           "Output format" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "json" ;
+        http:paramValue      "SHAPE-ZIP" , "gml3" , "gml32" , "csv" , "excel" , "excel2007" , "json" , "KML" ;
+        hydra:required       true ;
+        hydra:variable       "outputFormat" .
+
+<http://www.w3.org/ns/INGV_milano>
+        a                       schema:address , schema:PostalAddress ;
+        schema:addressCountry   "Italy" ;
+        schema:addressLocality  "Milan" ;
+        schema:postalCode       "20133" ;
+        schema:streetAddress    "Via A. Corti 12" .
+
+<https://tsunamiarchive.ingv.it/services/tsunami>
+        a                  dcat:Dataset ;
+        dct:description    "A unified catalogue containing tsunamis generated in the European and Mediterranean seas since 6150 B.C. to current days. The Catalogue of Euro-Mediterranean Tsunamis (EMTC2.0), realized in ArcGis online, contains 293 tsunamis and is the updated version of EMTC published in 2014.The Italian section of the database was revised in order to implement the new database of tsunami effects along the Italian coasts (ITED). In order to improve the quality of the data, all the Italian tsunamis of seismic origin have been linked to the Parametric Catalogue of Italian Earthquakes (CPTI15) adopted as the reference earthquake catalogue.In the EMTC2.0 two new tsunami events were added, more information enriched the knowledge on the tsunamis present in the Italian section and, accordingly to the new achieved info, some tsunami parameters, such as the reliability, intensity, generating cause, etc. have changed.ITED and EMTCv2 are interconnected and they can be accessed through a purpose-built WebApp that allows the user to easily switch from one database to another. EMTC is interoperable with the database of the Italian Archive of Historical Earthquake Data (ASMI)." ;
+        dct:identifier     "https://tsunamiarchive.ingv.it/services/tsunami"^^xsd:anyURI ;
+        dct:publisher      <PIC:999472675> ;
+        dct:title          "Euro-Mediterranean Tsunami Catalogue (EMTC)" ;
+        adms:identifier    <http://www.w3.org/ns/Identifier_DOI> , <http://www.w3.org/ns/Identifier_PIC> ;
+        dcat:contactPoint  <http://www.w3.org/ns/Scientific_Contact2> , <http://www.w3.org/ns/Scientific_Contact1> , <http://www.w3.org/ns/Scientific_Contact3> ;
+        dcat:distribution  <http://www.w3.org/ns/EMTCv2_Full_Dataset> ;
+        dcat:theme         <https://www.epos-eu.org/epos-dcat-ap#Concept/55d3ff80-aac5-4478-b743-7643ba75fec2> .
+
+<http://www.w3.org/ns/max_lon_EMTCv2>
+        a                hydra:mapping , hydra:IriTemplateMapping ;
+        rdfs:label       "Maximum longitude" ;
+        rdfs:range       "xsd:float" ;
+        schema:maxValue  "180" ;
+        schema:minValue  "-180" ;
+        http:paramValue  "41" ;
+        hydra:property   "epos:easternmostLongitude" ;
+        hydra:required   false ;
+        hydra:variable   "maxlongitude" .
+
+<http://www.w3.org/ns/Operation-EMTC_V2_Full_Dataset>
+        a               dcat:accessURL , hydra:Operation , hydra:supportedOperation ;
+        hydra:method    "GET" ;
+        hydra:property  <http://www.w3.org/ns/IriTemplate-EMTC_v2_Ful_Dataset> ;
+        hydra:returns   "application/json" .
+
+<http://www.w3.org/ns/request_WFS>
+        a                    hydra:IriTemplateMapping , hydra:mapping ;
+        rdfs:label           "Request Type" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "getFeature" ;
+        http:paramValue      "getFeature" ;
+        hydra:required       true ;
+        hydra:variable       "request" .
+
+<http://www.w3.org/ns/person_scientific_contact3>
+        a                      schema:Person ;
+        schema:address         <http://www.w3.org/ns/INGV_roma> ;
+        schema:contactPoint    <http://www.w3.org/ns/Scientific_Contact3> ;
+        schema:email           "beatriz.brizuela@ingv.it" ;
+        schema:familyName      "Brizuela" ;
+        schema:givenName       "Beatriz" ;
+        schema:identifier      <http://www.w3.org/ns/orcid_contact3> ;
+        schema:qualifications  "Technologist" .
+
+<http://www.w3.org/ns/min_lat_EMTCv2>
+        a                hydra:mapping , hydra:IriTemplateMapping ;
+        rdfs:label       "Minimum Latitude" ;
+        rdfs:range       "xsd:float" ;
+        schema:maxValue  "180" ;
+        schema:minValue  "-180" ;
+        http:paramValue  "28.2829990386963" ;
+        hydra:property   "epos:southernmostLatitude" ;
+        hydra:required   false ;
+        hydra:variable   "minlatitude" .
+
+<http://www.w3.org/ns/Period_of_Time_Webservice>
+        a                 dct:temporal , dct:PeriodOfTime ;
+        schema:startDate  "2019-07-19T18:25:40Z"^^xsd:dateTime .
+
+<http://www.w3.org/ns/typeName_WFS_EMTCv2>
+        a                    hydra:IriTemplateMapping , hydra:mapping ;
+        rdfs:label           "Feature layer to load" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "tsunami:EMTC_v2" ;
+        http:paramValue      "tsunami:EMTC_v2" ;
+        hydra:required       true ;
+        hydra:variable       "typeNames" .
+
+<http://www.w3.org/ns/Scientific_Contact3>
+        a                         schema:contactPoint , dcat:contactPoint , schema:ContactPoint ;
+        schema:availableLanguage  "es" , "it" , "en" ;
+        schema:contactType        "scientificContact" ;
+        schema:email              "beatriz.brizuela@ingv.it" .
+
+<http://www.w3.org/ns/INGV_roma>
+        a                       schema:PostalAddress , schema:address ;
+        schema:addressCountry   "Italy" ;
+        schema:addressLocality  "Rome" ;
+        schema:postalCode       "00143" ;
+        schema:streetAddress    "Via di Vigna Murata 605" .
+
+<http://www.w3.org/ns/EMTCv2_Full_Dataset>
+        a                dcat:Distribution , dcat:distribution ;
+        dct:conformsTo   <http://www.w3.org/ns/Tsunami/EMTC_v2> ;
+        dct:description  "A unified catalogue containing tsunamis generated in the European and Mediterranean seas since 6150 B.C. to current days. The Catalogue of Euro-Mediterranean Tsunamis (EMTC2.0), realized in ArcGis online, contains 293 tsunamis and is the updated version of EMTC published in 2014.The Italian section of the database was revised in order to implement the new database of tsunami effects along the Italian coasts (ITED). In order to improve the quality of the data, all the Italian tsunamis of seismic origin have been linked to the Parametric Catalogue of Italian Earthquakes (CPTI15) adopted as the reference earthquake catalogue.In the EMTC2.0 two new tsunami events were added, more information enriched the knowledge on the tsunamis present in the Italian section and, accordingly to the new achieved info, some tsunami parameters, such as the reliability, intensity, generating cause, etc. have changed.ITED and EMTCv2 are interconnected and they can be accessed through a purpose-built WebApp that allows the user to easily switch from one database to another. EMTC is interoperable with the database of the Italian Archive of Historical Earthquake Data (ASMI)." ;
+        dct:format       "http://publications.europa.eu/resource/authority/file-type/JSON"^^xsd:anyURI ;
+        dct:identifier   "http://www.w3.org/ns/EMTCv2_Full_Dataset" ;
+        dct:issued       "2019-05-02T10:44:10Z"^^xsd:dateTime ;
+        dct:license      "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+        dct:modified     "2022-07-19T10:44:11Z"^^xsd:dateTime ;
+        dct:title        "EMTC V2 Tsunami Catalogue Full Dataset (OGC WFS)" ;
+        dct:type         "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI ;
+        dcat:accessURL   <http://www.w3.org/ns/Operation-EMTC_V2_Full_Dataset> .
+
+<http://www.w3.org/ns/crs_WGS84>
+        a                    hydra:IriTemplateMapping , hydra:mapping ;
+        rdfs:label           "SRS to use" ;
+        rdfs:range           "xsd:string" ;
+        schema:defaultValue  "EPSG:4326" ;
+        http:paramValue      "EPSG:4326" ;
+        hydra:required       true ;
+        hydra:variable       "crs" .
+
+<http://www.w3.org/ns/orcid_contac2>
+        a                  schema:identifier , schema:PropertyValue ;
+        schema:propertyID  "orcid" ;
+        schema:value       "https://orcid.org/0000-0003-4088-7841" .
+
+<http://www.w3.org/ns/orcid_contact3>
+        a                  schema:identifier , schema:PropertyValue ;
+        schema:propertyID  "orcid" ;
+        schema:value       "https://orcid.org/0000-0002-0851-3543" .
+
+<http://www.w3.org/ns/Scientific_Contact2>
+        a                         schema:contactPoint , dcat:contactPoint , schema:ContactPoint ;
+        schema:availableLanguage  "it" , "en" ;
+        schema:contactType        "scientificContact" ;
+        schema:email              "laura.graziani@ingv.it" .
+
+<http://www.w3.org/ns/Tsunami/EMTC_v2> a epos:WebService;
+	schema:identifier "http://www.w3.org/ns/Tsunami/EMTC_v2" ;
+	schema:description "These web services provide both map layers and vectorial data of the EMTC_v2 dataset. They are implemented according to the OGC (Open Geospatial Consortium) standard Web Map Service - WMS (1.1.1, 1.3.0)";
+        dcat:theme <https://www.epos-eu.org/epos-dcat-ap#Concept/55d3ff80-aac5-4478-b743-7643ba75fec2> ;
+	schema:name "Euro-Mediterranean Tsunami Catalogue (EMTC)" ;
+	hydra:entrypoint "https://tsunamiarchive.ingv.it"^^xsd:anyURI ;
+	schema:provider <PIC:999472675> ;
+	schema:datePublished "2019-07-19T18:08:53Z"^^xsd:dateTime ;
+     dct:spatial <http://www.w3.org/ns/Location_webservice> ;
+	hydra:supportedOperation <http://www.w3.org/ns/Operation-EMTC_V2_Full_Dataset>;
+	schema:keywords "catalog" , "runup" , "run-up" , "tsunami" , "tsunami effects" , "catalogue" , "inundation" ;
+	dct:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI;
+	dct:temporal <http://www.w3.org/ns/Period_of_Time_Webservice> ;
+     dcat:contactPoint <http://www.w3.org/ns/Manager_contact1> ;
+	dct:conformsTo <https://www.epos-eu.org/epos-dcat-ap#ApiDocumentation/54723697-fbb5-43a6-a7f3-5f7b4f9ef2fa> ;
