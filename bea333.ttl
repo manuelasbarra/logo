@@ -232,7 +232,7 @@
 
 <http://www.w3.org/ns/request_WFS>
         a                    hydra:IriTemplateMapping , hydra:mapping ;
-        rdfs:label           "Request Type" ;
+        rdfs:label           "Request TypeAA" ;
         rdfs:range           "xsd:string" ;
         schema:defaultValue  "getFeature" ;
         http:paramValue      "getFeature" ;
