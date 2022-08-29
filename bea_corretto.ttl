@@ -150,10 +150,7 @@
 	dct:title "Euro-Mediterranean Tsunami Catalogue (EMTC)";
 	dct:description "A unified catalogue containing tsunamis generated in the European and Mediterranean seas since 6150 B.C. to current days. The Catalogue of Euro-Mediterranean Tsunamis (EMTC2.0), realized in ArcGis online, contains 293 tsunamis and is the updated version of EMTC published in 2014.The Italian section of the database was revised in order to implement the new database of tsunami effects along the Italian coasts (ITED). In order to improve the quality of the data, all the Italian tsunamis of seismic origin have been linked to the Parametric Catalogue of Italian Earthquakes (CPTI15) adopted as the reference earthquake catalogue.In the EMTC2.0 two new tsunami events were added, more information enriched the knowledge on the tsunamis present in the Italian section and, accordingly to the new achieved info, some tsunami parameters, such as the reliability, intensity, generating cause, etc. have changed.ITED and EMTCv2 are interconnected and they can be accessed through a purpose-built WebApp that allows the user to easily switch from one database to another. EMTC is interoperable with the database of the Italian Archive of Historical Earthquake Data (ASMI).";
 	dct:identifier "https://tsunamiarchive.ingv.it/services/tsunami";
-	adms:identifier [ a adms:Identifier;
-		adms:schemeAgency "DDSS-ID";
-		skos:notation "WP08-DDSS-024";
-	];
+	adms:identifier <http://www.w3.org/ns/Identifier_DOI>, <http://www.w3.org/ns/Identifier_DDSS-ID> ;
 	dct:type "http://purl.org/dc/dcmitype/Dataset"^^xsd:anyURI;
 	dct:created "2010-06-01"^^xsd:date;
 	dct:modified "2018-09-10"^^xsd:date;
@@ -166,13 +163,18 @@
 	];
 	dcat:theme <epos:EMTC_v2>;
 	dcat:keyword "catalog" , "runup" , "run-up" , "tsunami" , "tsunami effects" , "catalogue" , "inundation" ;
-	dcat:contactPoint <https://orcid.org/0000-0003-2797-9557/scientificContact>;
-        dcat:contactPoint <https://orcid.org/0000-0003-4088-7841/scientificContact>;
-	dcat:contactPoint <https://orcid.org/0000-0002-0851-3543/scientificContact>;
+	dcat:contactPoint <http://www.w3.org/ns/Scientific_Contact1> , <http://www.w3.org/ns/Scientific_Contact2> , <http://www.w3.org/ns/Scientific_Contact3>   ;
 	dct:publisher <PIC:999472675>;
 	dcat:distribution <http://www.w3.org/ns/EMTCv2_Full_Dataset>;
 .
-
+<http://www.w3.org/ns/Identifier_DDSS-ID> a adms:Identifier;
+		adms:schemeAgency "DDSS-ID";
+		skos:notation "WP18-DDSS-002";
+.
+<http://www.w3.org/ns/Identifier_DOI> a adms:Identifier;
+		adms:schemeAgency "DOI";
+		skos:notation "10.13127/tsunami/emtc.2.0";
+.
 #
 #   -------------------------------- Distributions --------------------------------
 #
@@ -202,19 +204,21 @@
 	hydra:entrypoint "https://tsunamiarchive.ingv.it"^^xsd:anyURI ;
 	schema:provider <PIC:999472675> ;
 	schema:datePublished "2019-07-19T18:08:53Z"^^xsd:dateTime ;
-	dct:spatial [ a dct:Location;
-		locn:geometry "POLYGON((-56.3000030517578 28.2829990386963,-56.3000030517578 69.8170013427734,41 69.8170013427734,41 28.2829990386963,-56.3000030517578 28.2829990386963))"^^gsp:wktLiteral;
-	];
+	dct:spatial <http://www.w3.org/ns/Location_webservice> ;
 	hydra:supportedOperation <http://www.w3.org/ns/Operation-EMTC_V2_Full_Dataset>;
 	schema:keywords "catalog" , "runup" , "run-up" , "tsunami" , "tsunami effects" , "catalogue" , "inundation" ;
 	dct:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI;
-	dct:temporal [ a dct:PeriodOfTime;
-		schema:startDate "2019-07-19T18:25:40Z"^^xsd:dateTime;
-	];
-	dcat:contactPoint <https://orcid.org/0000-0003-2185-3267/contactPoint> ;
+	dct:temporal <http://www.w3.org/ns/Period_of_Time_Webservice> ;
+	dcat:contactPoint <http://www.w3.org/ns/Manager_contact1> ;
 	dct:conformsTo <http://www.w3.org/ns/EMTCv2_Full_Dataset/APIDocumentation>;
 .
 
+<http://www.w3.org/ns/Location_webservice> a dct:Location;
+	locn:geometry "POLYGON((-56.3000030517578 28.2829990386963,-56.3000030517578 69.8170013427734,41 69.8170013427734,41 28.2829990386963,-56.3000030517578 28.2829990386963))"^^gsp:wktLiteral;
+.	
+<http://www.w3.org/ns/Period_of_Time_Webservice> a dct:PeriodOfTime;
+	schema:startDate "2019-07-19T18:25:40Z"^^xsd:dateTime;
+.
 <http://www.w3.org/ns/EMTCv2_Full_Dataset/APIDocumentation> a hydra:ApiDocumentation;
       	hydra:title "test" ;
       	hydra:description "Documentation for the fdsnws-event webservice" ;
@@ -229,59 +233,62 @@
 <http://www.w3.org/ns/Operation-EMTC_V2_Full_Dataset> a hydra:Operation;
 	hydra:method "GET"^^xsd:string;
 	hydra:returns "application/json";
-	hydra:property[ a hydra:IriTemplate;
-		hydra:template "https://tsunamiarchive.ingv.it/services/tsunami/wfs/wfs{?service, version, request, typeNames, outputFormat}"^^xsd:string;
-			hydra:mapping[ a hydra:IriTemplateMapping;
-				hydra:variable "service";
-				rdfs:range "xsd:string";
-				rdfs:label "Service";
-				http:paramValue "WFS" ;
-				schema:defaultValue "WFS";
-				hydra:required "true"^^xsd:boolean;
-			];
-			hydra:mapping[ a hydra:IriTemplateMapping;
-				hydra:variable "version"^^xsd:string;
-				rdfs:range "xsd:string";
-				rdfs:label "Service version";
-				schema:defaultValue "2.0.0" ;
-				http:paramValue "2.0.0" ;
-				http:paramValue "1.0.0" ;
-				http:paramValue "1.1.0" ;
-				hydra:required "true"^^xsd:boolean;
-			];
-		        hydra:mapping[ a hydra:IriTemplateMapping;
-				hydra:variable "request"^^xsd:string;
-				rdfs:range "xsd:string";
-				rdfs:label "Request Type";
-				schema:defaultValue "getFeature" ;
-				http:paramValue "getFeature" ;
-				hydra:required "true"^^xsd:boolean;
-			];
-			hydra:mapping[ a hydra:IriTemplateMapping;
-				hydra:variable "typeNames"^^xsd:string;
-				rdfs:range "xsd:string";
-				rdfs:label "Feature layer to load";
-				schema:defaultValue "tsunami:EMTC_v2" ;
-				http:paramValue "tsunami:EMTC_v2" ;
-				hydra:required "true"^^xsd:boolean;
-			];
-		        hydra:mapping[ a hydra:IriTemplateMapping;
-				hydra:variable "outputFormat"^^xsd:string;
-				rdfs:range "xsd:json";
-				rdfs:label "Output format";
-				schema:defaultValue "tsunami:EMTC_v2" ;
-				http:paramValue "SHAPE-ZIP" ;
-				http:paramValue "gml3" ;
-				http:paramValue "gml32";
-				http:paramValue "csv";
-				http:paramValue "excel"; 
-				http:paramValue "excel2007"; 
-				http:paramValue "json" ;
-				http:paramValue "KML" ;
-				hydra:required "true"^^xsd:boolean;
-			];
-			
-	];
+	hydra:property <http://www.w3.org/ns/IriTemplate-EMTC_v2_Full_Dataset> ;
+.
+
+<http://www.w3.org/ns/IriTemplate-EMTC_v2_Full_Dataset> a hydra:IriTemplate;
+	hydra:template "https://tsunamiarchive.ingv.it/services/tsunami/wfs/wfs{?service, version, request, typeNames, outputFormat}"^^xsd:string;
+	hydra:mapping <http://www.w3.org/ns/Service_WFS> , <http://www.w3.org/ns/version_WFS> , <http://www.w3.org/ns/request_WFS>, <http://www.w3.org/ns/typeName_WFS> , <http://www.w3.org/ns/output_format_WFS>;
+.
+
+<http://www.w3.org/ns/Service_WFS> a hydra:IriTemplateMapping;
+	hydra:variable "service";
+	rdfs:range "xsd:string";
+	rdfs:label "Service";
+	http:paramValue "WFS" ;
+	schema:defaultValue "WFS";
+	hydra:required "true"^^xsd:boolean;
+.
+<http://www.w3.org/ns/version_WFS> a hydra:IriTemplateMapping;
+	hydra:variable "version"^^xsd:string;
+	rdfs:range "xsd:string";
+	rdfs:label "Service version";
+	schema:defaultValue "2.0.0" ;
+	http:paramValue "2.0.0" ;
+	http:paramValue "1.0.0" ;
+	http:paramValue "1.1.0" ;
+	hydra:required "true"^^xsd:boolean;
+.
+<http://www.w3.org/ns/request_WFS> a hydra:IriTemplateMapping;
+	hydra:variable "request"^^xsd:string;
+	rdfs:range "xsd:string";
+	rdfs:label "Request Type";
+	schema:defaultValue "getFeature" ;
+	http:paramValue "getFeature" ;
+	hydra:required "true"^^xsd:boolean;
+.
+<http://www.w3.org/ns/typeName_WFS> a hydra:IriTemplateMapping;
+	hydra:variable "typeNames"^^xsd:string;
+	rdfs:range "xsd:string";
+	rdfs:label "Feature layer to load";
+	schema:defaultValue "tsunami:EMTC_v2" ;
+	http:paramValue "tsunami:EMTC_v2" ;
+	hydra:required "true"^^xsd:boolean;
+.
+<http://www.w3.org/ns/output_format_WFS> a hydra:IriTemplateMapping;
+	hydra:variable "outputFormat"^^xsd:string;
+	rdfs:range "xsd:json";
+	rdfs:label "Output format";
+	schema:defaultValue "tsunami:EMTC_v2" ;
+	http:paramValue "SHAPE-ZIP" ;
+	http:paramValue "gml3" ;
+	http:paramValue "gml32";
+	http:paramValue "csv";
+	http:paramValue "excel"; 
+	http:paramValue "excel2007"; 
+	http:paramValue "json" ;
+	http:paramValue "KML" ;
+	hydra:required "true"^^xsd:boolean;
 .
 
 
