@@ -33,119 +33,113 @@
 		schema:value "999472675";
 	];
 	schema:legalName "Istituto Nazionale di Geofisica e Vulcanologia (INGV)"@it;
-	schema:address [ a schema:PostalAddress;
-		schema:streetAddress "via di Vigna Murata 605";
-		schema:addressLocality "Roma";
-		schema:postalCode "00143";
-		schema:addressCountry "Italy";
-	];
+	schema:address <http://www.w3.org/ns/INGV_roma> ;
 	schema:logo "https://data.ingv.it/images/logos/logo_ingv_vertical_two_lines.png"^^xsd:anyURI;
 	schema:url "http://www.ingv.it/"^^xsd:anyURI;
 	schema:email "ufficiogestionedati@ingv.it";
-	schema:telephone "+3906518601";
-	schema:contactPoint <https://orcid.org/0000-0003-2797-9557/scientificContact>;
-	schema:contactPoint <https://orcid.org/0000-0003-2185-3267/contactPoint>;
+	# schema:telephone "+3906518601";
+	# schema:contactPoint <https://orcid.org/0000-0003-2797-9557/scientificContact>;
+	# schema:contactPoint <https://orcid.org/0000-0003-2185-3267/contactPoint>;
 .
 
 <https://orcid.org/0000-0003-2797-9557> a schema:Person;
-	schema:identifier [ a schema:PropertyValue;
-		schema:propertyID "orcid";
-		schema:value "https://orcid.org/0000-0003-2797-9557";
-	];
+	schema:identifier <http://www.w3.org/ns/orcid_contac1> ;
 	schema:familyName "Maramai";
 	schema:givenName "Alessandra";
-	schema:address [ a schema:PostalAddress;
-		schema:streetAddress "Via di Vigna Murata 605";
-		schema:addressLocality "Rome";
-		schema:postalCode "00143";
-		schema:addressCountry "Italy";
-	];
+	schema:address <http://www.w3.org/ns/INGV_roma> ;
 	schema:email "alessandra.maramai@ingv.it";
-	schema:url "https://orcid.org/0000-0003-2797-9557"^^xsd:anyURI;
+	# schema:url "https://orcid.org/0000-0003-2797-9557"^^xsd:anyURI;
         schema:qualifications "Researcher";
 	schema:affiliation <PIC:999472675>;
-	schema:contactPoint <https://orcid.org/0000-0003-2797-9557/scientificContact>;
+	schema:contactPoint <http://www.w3.org/ns/Scientific_Contact1>;
 .
-
 <https://orcid.org/0000-0003-4088-7841> a schema:Person;
-	schema:identifier [ a schema:PropertyValue;
-		schema:propertyID "orcid";
-		schema:value "https://orcid.org/0000-0003-4088-7841";
-	];
+	schema:identifier <http://www.w3.org/ns/orcid_contac2>;
 	schema:familyName "Graziani";
 	schema:givenName "Laura";
-	schema:address [ a schema:PostalAddress;
-		schema:streetAddress "Via di Vigna Murata 605";
-		schema:addressLocality "Rome";
-		schema:postalCode "00143";
-		schema:addressCountry "Italy";
-	];
+	schema:address <http://www.w3.org/ns/INGV_roma> ;
 	schema:email "laura.graziani@ingv.it";
-	schema:url "https://orcid.org/0000-0003-4088-7841"^^xsd:anyURI;
+	# schema:url "https://orcid.org/0000-0003-4088-7841"^^xsd:anyURI;
         schema:qualifications "Researcher";
 	schema:affiliation <PIC:999472675>;
-	schema:contactPoint <https://orcid.org/0000-0003-4088-7841/scientificContact>;
+	schema:contactPoint <http://www.w3.org/ns/Scientific_Contact2>;
 .
 <https://orcid.org/0000-0002-0851-3543> a schema:Person;
-	schema:identifier [ a schema:PropertyValue;
-		schema:propertyID "orcid";
-		schema:value "https://orcid.org/0000-0002-0851-3543";
-	];
+	schema:identifier <http://www.w3.org/ns/orcid_contact3>;
 	schema:familyName "Brizuela";
 	schema:givenName "Beatriz";
-	schema:address [ a schema:PostalAddress;
-		schema:streetAddress "Via di Vigna Murata 605";
-		schema:addressLocality "Rome";
-		schema:postalCode "00143";
-		schema:addressCountry "Italy";
-	];
+	schema:address <http://www.w3.org/ns/INGV_roma> ;
 	schema:email "beatriz.brizuela@ingv.it";
-	schema:url "https://orcid.org/0000-0002-0851-3543"^^xsd:anyURI;
+	# schema:url "https://orcid.org/0000-0002-0851-3543"^^xsd:anyURI;
         schema:qualifications "Technologist";
 	schema:affiliation <PIC:999472675>;
-	schema:contactPoint <https://orcid.org/0000-0002-0851-3543/scientificContact>;
+	schema:contactPoint <http://www.w3.org/ns/Scientific_Contact3> ;
 .
 <https://orcid.org/0000-0003-2185-3267> a schema:Person;
-	schema:identifier [ a schema:PropertyValue;
-		schema:propertyID "orcid";
-		schema:value "https://orcid.org/0000-0003-2185-3267";
-	];
+	schema:identifier <http://www.w3.org/ns/orcid_contact_manager> ;
 	schema:familyName "Locati";
 	schema:givenName "Mario";
-	schema:address [ a schema:PostalAddress;
-		schema:streetAddress "via Alfonso Corti 12";
-		schema:addressLocality "Milano";
-		schema:postalCode "20133";
-		schema:addressCountry "ITALY";
-	];
+	schema:address <http://www.w3.org/ns/INGV_milano> ;
 	schema:email "mario.locati@ingv.it";
 	schema:telephone "+390223699451";
 	schema:qualifications "Technologist";
 	schema:affiliation <PIC:999472675>;
-	schema:contactPoint <https://orcid.org/0000-0003-2185-3267/contactPoint>;
+	schema:contactPoint <http://www.w3.org/ns/Manager_contact1>;
 .
 
-<https://orcid.org/0000-0003-2797-9557/scientificContact> a schema:ContactPoint;
-	schema:email "alessandra.maramai@ingv.it";
-	schema:availableLanguage "en";
+<http://www.w3.org/ns/Scientific_Contact1> a schema:ContactPoint;
+	schema:availableLanguage "it" ,"en";
 	schema:contactType "scientificContact";
+        schema:email "alessandra.maramai@ingv.it";
 .
 
-<https://orcid.org/0000-0003-4088-7841/scientificContact> a schema:ContactPoint;
-	schema:email "laura.graziani@ingv.it";
-	schema:availableLanguage "en";
-	schema:contactType "scientificContact";
-.
-<https://orcid.org/0000-0002-0851-3543/scientificContact> a schema:ContactPoint;
-	schema:email "beatriz.brizuela@ingv.it";
-	schema:availableLanguage "en";
-	schema:contactType "scientificContact";
+<http://www.w3.org/ns/Scientific_Contact2> a schema:ContactPoint;
+        schema:availableLanguage "it" ,"en";
+        schema:contactType "scientificContact";
+	schema:email "laura.graziani@ingv.it";	
 .
 
-<https://orcid.org/0000-0003-2185-3267/contactPoint> a schema:ContactPoint;
-	schema:email "mario.locati@ingv.it";
-	schema:availableLanguage "en";
+<http://www.w3.org/ns/Scientific_Contact3> a schema:ContactPoint;
+	schema:availableLanguage "es" , "it" , "en" ;
+	schema:contactType "scientificContact";
+        schema:email "beatriz.brizuela@ingv.it";
+.
+
+<http://www.w3.org/ns/Manager_contact1> a schema:ContactPoint;
+	schema:availableLanguage "it" ,"en";
+        schema:email "mario.locati@ingv.it";
 	schema:contactType "manager";
+.
+#   -------------------------------- Identifier --------------------------------
+
+<http://www.w3.org/ns/orcid_contac1> a schema:PropertyValue;
+	schema:propertyID "orcid";
+	schema:value "https://orcid.org/0000-0003-2797-9557";
+.
+<http://www.w3.org/ns/orcid_contac2> a schema:PropertyValue;
+	schema:propertyID "orcid";
+	schema:value "https://orcid.org/0000-0003-4088-7841";
+.
+<http://www.w3.org/ns/orcid_contact3> a schema:PropertyValue;
+	schema:propertyID "orcid";
+	schema:value "https://orcid.org/0000-0002-0851-3543";
+.
+<http://www.w3.org/ns/orcid_contact_manager> a schema:PropertyValue;
+	schema:propertyID "orcid";
+	schema:value "https://orcid.org/0000-0003-2185-3267";
+.
+
+<http://www.w3.org/ns/INGV_roma> a schema:PostalAddress;
+	schema:addressCountry "Italy";
+        schema:addressLocality "Rome";
+        schema:postalCode "00143";
+        schema:streetAddress "Via di Vigna Murata 605";
+.
+<http://www.w3.org/ns/INGV_milano> a schema:PostalAddress;
+	schema:addressCountry "Italy";
+        schema:addressLocality "Milan";
+        schema:postalCode "20133";
+        schema:streetAddress "Via A. Corti 12";
 .
 
 #
@@ -179,7 +173,22 @@
 	dcat:distribution <http://www.w3.org/ns/EMTCv2_Full_Dataset>;
 .
 
+#
+#   -------------------------------- Distributions --------------------------------
+#
 
+<http://www.w3.org/ns/EMTCv2_Full_Dataset> a dcat:Distribution;
+	dct:title "EMTC V2 Tsunami Catalogue Full Dataset (OGC WFS)";
+	dct:description "A unified catalogue containing tsunamis generated in the European and Mediterranean seas since 6150 B.C. to current days. The Catalogue of Euro-Mediterranean Tsunamis (EMTC2.0), realized in ArcGis online, contains 293 tsunamis and is the updated version of EMTC published in 2014.The Italian section of the database was revised in order to implement the new database of tsunami effects along the Italian coasts (ITED). In order to improve the quality of the data, all the Italian tsunamis of seismic origin have been linked to the Parametric Catalogue of Italian Earthquakes (CPTI15) adopted as the reference earthquake catalogue.In the EMTC2.0 two new tsunami events were added, more information enriched the knowledge on the tsunamis present in the Italian section and, accordingly to the new achieved info, some tsunami parameters, such as the reliability, intensity, generating cause, etc. have changed.ITED and EMTCv2 are interconnected and they can be accessed through a purpose-built WebApp that allows the user to easily switch from one database to another. EMTC is interoperable with the database of the Italian Archive of Historical Earthquake Data (ASMI).";
+	dct:identifier "http://www.w3.org/ns/EMTCv2_Full_Dataset";
+	dct:issued "2019-05-02T10:44:10Z"^^xsd:dateTime;
+	dct:modified "2022-07-19T10:44:11Z"^^xsd:dateTime;
+	dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
+	dct:conformsTo <http://www.w3.org/ns/Tsunami/EMTC_v2>;
+	dcat:accessURL <http://www.w3.org/ns/Operation-EMTC_V2_Full_Dataset>;
+	dct:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI;
+	dct:format "http://publications.europa.eu/resource/authority/file-type/JSON"^^xsd:anyURI;
+.
 
 #
 #   -------------------------------- Web Services and their documentation --------------------------------
@@ -275,19 +284,4 @@
 	];
 .
 
-#
-#   -------------------------------- Distributions --------------------------------
-#
 
-<http://www.w3.org/ns/EMTCv2_Full_Dataset> a dcat:Distribution;
-	dct:title "EMTC V2 Tsunami Catalogue Full Dataset (OGC WFS)";
-	dct:description "A unified catalogue containing tsunamis generated in the European and Mediterranean seas since 6150 B.C. to current days. The Catalogue of Euro-Mediterranean Tsunamis (EMTC2.0), realized in ArcGis online, contains 293 tsunamis and is the updated version of EMTC published in 2014.The Italian section of the database was revised in order to implement the new database of tsunami effects along the Italian coasts (ITED). In order to improve the quality of the data, all the Italian tsunamis of seismic origin have been linked to the Parametric Catalogue of Italian Earthquakes (CPTI15) adopted as the reference earthquake catalogue.In the EMTC2.0 two new tsunami events were added, more information enriched the knowledge on the tsunamis present in the Italian section and, accordingly to the new achieved info, some tsunami parameters, such as the reliability, intensity, generating cause, etc. have changed.ITED and EMTCv2 are interconnected and they can be accessed through a purpose-built WebApp that allows the user to easily switch from one database to another. EMTC is interoperable with the database of the Italian Archive of Historical Earthquake Data (ASMI).";
-	dct:identifier "http://www.w3.org/ns/EMTCv2_Full_Dataset";
-	dct:issued "2019-05-02T10:44:10Z"^^xsd:dateTime;
-	dct:modified "2022-07-19T10:44:11Z"^^xsd:dateTime;
-	dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
-	dct:conformsTo <http://www.w3.org/ns/Tsunami/EMTC_v2>;
-	dcat:accessURL <http://www.w3.org/ns/Operation-EMTC_V2_Full_Dataset>;
-	dct:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI;
-	dct:format "http://publications.europa.eu/resource/authority/file-type/JSON"^^xsd:anyURI;
-.
