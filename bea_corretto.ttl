@@ -1,0 +1,293 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix epos: <https://www.epos-eu.org/epos-dcat-ap#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix hydra: <http://www.w3.org/ns/hydra/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <http://schema.org/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix cnt: <http://www.w3.org/2011/content#> .
+@prefix locn: <http://www.w3.org/ns/locn#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix http: <http://www.w3.org/2006/http#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix gsp: <http://www.opengis.net/ont/geosparql#> .
+
+<epos:Tsunami> a skos:ConceptScheme;
+	dct:title "Tsunami";
+	dct:description "It contains the concepts of Tsunami";
+.
+
+<epos:EMTC_v2> a skos:Concept;
+	skos:prefLabel "EMTC_v2";
+	skos:definition "EMTC_v2";
+	skos:inScheme <epos:Tsunami>;
+.
+
+<PIC:999472675> a schema:Organization;
+	schema:identifier [ a schema:PropertyValue;
+		schema:propertyID "PIC";
+		schema:value "999472675";
+	];
+	schema:legalName "Istituto Nazionale di Geofisica e Vulcanologia (INGV)"@it;
+	schema:address [ a schema:PostalAddress;
+		schema:streetAddress "via di Vigna Murata 605";
+		schema:addressLocality "Roma";
+		schema:postalCode "00143";
+		schema:addressCountry "Italy";
+	];
+	schema:logo "https://data.ingv.it/images/logos/logo_ingv_vertical_two_lines.png"^^xsd:anyURI;
+	schema:url "http://www.ingv.it/"^^xsd:anyURI;
+	schema:email "ufficiogestionedati@ingv.it";
+	schema:telephone "+3906518601";
+	schema:contactPoint <https://orcid.org/0000-0003-2797-9557/scientificContact>;
+	schema:contactPoint <https://orcid.org/0000-0003-2185-3267/contactPoint>;
+.
+
+<https://orcid.org/0000-0003-2797-9557> a schema:Person;
+	schema:identifier [ a schema:PropertyValue;
+		schema:propertyID "orcid";
+		schema:value "https://orcid.org/0000-0003-2797-9557";
+	];
+	schema:familyName "Maramai";
+	schema:givenName "Alessandra";
+	schema:address [ a schema:PostalAddress;
+		schema:streetAddress "Via di Vigna Murata 605";
+		schema:addressLocality "Rome";
+		schema:postalCode "00143";
+		schema:addressCountry "Italy";
+	];
+	schema:email "alessandra.maramai@ingv.it";
+	schema:url "https://orcid.org/0000-0003-2797-9557"^^xsd:anyURI;
+        schema:qualifications "Researcher";
+	schema:affiliation <PIC:999472675>;
+	schema:contactPoint <https://orcid.org/0000-0003-2797-9557/scientificContact>;
+.
+
+<https://orcid.org/0000-0003-4088-7841> a schema:Person;
+	schema:identifier [ a schema:PropertyValue;
+		schema:propertyID "orcid";
+		schema:value "https://orcid.org/0000-0003-4088-7841";
+	];
+	schema:familyName "Graziani";
+	schema:givenName "Laura";
+	schema:address [ a schema:PostalAddress;
+		schema:streetAddress "Via di Vigna Murata 605";
+		schema:addressLocality "Rome";
+		schema:postalCode "00143";
+		schema:addressCountry "Italy";
+	];
+	schema:email "laura.graziani@ingv.it";
+	schema:url "https://orcid.org/0000-0003-4088-7841"^^xsd:anyURI;
+        schema:qualifications "Researcher";
+	schema:affiliation <PIC:999472675>;
+	schema:contactPoint <https://orcid.org/0000-0003-4088-7841/scientificContact>;
+.
+<https://orcid.org/0000-0002-0851-3543> a schema:Person;
+	schema:identifier [ a schema:PropertyValue;
+		schema:propertyID "orcid";
+		schema:value "https://orcid.org/0000-0002-0851-3543";
+	];
+	schema:familyName "Brizuela";
+	schema:givenName "Beatriz";
+	schema:address [ a schema:PostalAddress;
+		schema:streetAddress "Via di Vigna Murata 605";
+		schema:addressLocality "Rome";
+		schema:postalCode "00143";
+		schema:addressCountry "Italy";
+	];
+	schema:email "beatriz.brizuela@ingv.it";
+	schema:url "https://orcid.org/0000-0002-0851-3543"^^xsd:anyURI;
+        schema:qualifications "Technologist";
+	schema:affiliation <PIC:999472675>;
+	schema:contactPoint <https://orcid.org/0000-0002-0851-3543/scientificContact>;
+.
+<https://orcid.org/0000-0003-2185-3267> a schema:Person;
+	schema:identifier [ a schema:PropertyValue;
+		schema:propertyID "orcid";
+		schema:value "https://orcid.org/0000-0003-2185-3267";
+	];
+	schema:familyName "Locati";
+	schema:givenName "Mario";
+	schema:address [ a schema:PostalAddress;
+		schema:streetAddress "via Alfonso Corti 12";
+		schema:addressLocality "Milano";
+		schema:postalCode "20133";
+		schema:addressCountry "ITALY";
+	];
+	schema:email "mario.locati@ingv.it";
+	schema:telephone "+390223699451";
+	schema:qualifications "Technologist";
+	schema:affiliation <PIC:999472675>;
+	schema:contactPoint <https://orcid.org/0000-0003-2185-3267/contactPoint>;
+.
+
+<https://orcid.org/0000-0003-2797-9557/scientificContact> a schema:ContactPoint;
+	schema:email "alessandra.maramai@ingv.it";
+	schema:availableLanguage "en";
+	schema:contactType "scientificContact";
+.
+
+<https://orcid.org/0000-0003-4088-7841/scientificContact> a schema:ContactPoint;
+	schema:email "laura.graziani@ingv.it";
+	schema:availableLanguage "en";
+	schema:contactType "scientificContact";
+.
+<https://orcid.org/0000-0002-0851-3543/scientificContact> a schema:ContactPoint;
+	schema:email "beatriz.brizuela@ingv.it";
+	schema:availableLanguage "en";
+	schema:contactType "scientificContact";
+.
+
+<https://orcid.org/0000-0003-2185-3267/contactPoint> a schema:ContactPoint;
+	schema:email "mario.locati@ingv.it";
+	schema:availableLanguage "en";
+	schema:contactType "manager";
+.
+
+#
+#   -------------------------------- Datasets --------------------------------
+#
+
+<https://tsunamiarchive.ingv.it/services/tsunami> a dcat:Dataset;
+	dct:title "Euro-Mediterranean Tsunami Catalogue (EMTC)";
+	dct:description "A unified catalogue containing tsunamis generated in the European and Mediterranean seas since 6150 B.C. to current days. The Catalogue of Euro-Mediterranean Tsunamis (EMTC2.0), realized in ArcGis online, contains 293 tsunamis and is the updated version of EMTC published in 2014.The Italian section of the database was revised in order to implement the new database of tsunami effects along the Italian coasts (ITED). In order to improve the quality of the data, all the Italian tsunamis of seismic origin have been linked to the Parametric Catalogue of Italian Earthquakes (CPTI15) adopted as the reference earthquake catalogue.In the EMTC2.0 two new tsunami events were added, more information enriched the knowledge on the tsunamis present in the Italian section and, accordingly to the new achieved info, some tsunami parameters, such as the reliability, intensity, generating cause, etc. have changed.ITED and EMTCv2 are interconnected and they can be accessed through a purpose-built WebApp that allows the user to easily switch from one database to another. EMTC is interoperable with the database of the Italian Archive of Historical Earthquake Data (ASMI).";
+	dct:identifier "https://tsunamiarchive.ingv.it/services/tsunami";
+	adms:identifier [ a adms:Identifier;
+		adms:schemeAgency "DDSS-ID";
+		skos:notation "WP08-DDSS-024";
+	];
+	dct:type "http://purl.org/dc/dcmitype/Dataset"^^xsd:anyURI;
+	dct:created "2010-06-01"^^xsd:date;
+	dct:modified "2018-09-10"^^xsd:date;
+	dct:temporal [ a dct:PeriodOfTime;
+		schema:startDate "1000-01-01T00:00:00Z"^^xsd:dateTime;
+		schema:endDate "1899-12-31T23:59:59Z"^^xsd:dateTime;
+	];
+	dct:spatial [ a dct:Location;
+		locn:geometry "POLYGON((-34 74,45 74,45 33,-34 33,-34 74))"^^gsp:wktLiteral;
+	];
+	dcat:theme <epos:EMTC_v2>;
+	dcat:keyword "catalog" , "runup" , "run-up" , "tsunami" , "tsunami effects" , "catalogue" , "inundation" ;
+	dcat:contactPoint <https://orcid.org/0000-0003-2797-9557/scientificContact>;
+        dcat:contactPoint <https://orcid.org/0000-0003-4088-7841/scientificContact>;
+	dcat:contactPoint <https://orcid.org/0000-0002-0851-3543/scientificContact>;
+	dct:publisher <PIC:999472675>;
+	dcat:distribution <http://www.w3.org/ns/EMTCv2_Full_Dataset>;
+.
+
+
+
+#
+#   -------------------------------- Web Services and their documentation --------------------------------
+#
+
+<http://www.w3.org/ns/Tsunami/EMTC_v2> a epos:WebService;
+	schema:identifier "http://www.w3.org/ns/Tsunami/EMTC_v2" ;
+	schema:description "These web services provide both map layers and vectorial data of the EMTC_v2 dataset. They are implemented according to the OGC (Open Geospatial Consortium) standard Web Map Service - WMS (1.1.1, 1.3.0)";
+	dcat:theme <epos:EMTC_v2> ;
+	schema:name "Euro-Mediterranean Tsunami Catalogue (EMTC)" ;
+	hydra:entrypoint "https://tsunamiarchive.ingv.it"^^xsd:anyURI ;
+	schema:provider <PIC:999472675> ;
+	schema:datePublished "2019-07-19T18:08:53Z"^^xsd:dateTime ;
+	dct:spatial [ a dct:Location;
+		locn:geometry "POLYGON((-56.3000030517578 28.2829990386963,-56.3000030517578 69.8170013427734,41 69.8170013427734,41 28.2829990386963,-56.3000030517578 28.2829990386963))"^^gsp:wktLiteral;
+	];
+	hydra:supportedOperation <http://www.w3.org/ns/Operation-EMTC_V2_Full_Dataset>;
+	schema:keywords "catalog" , "runup" , "run-up" , "tsunami" , "tsunami effects" , "catalogue" , "inundation" ;
+	dct:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI;
+	dct:temporal [ a dct:PeriodOfTime;
+		schema:startDate "2019-07-19T18:25:40Z"^^xsd:dateTime;
+	];
+	dcat:contactPoint <https://orcid.org/0000-0003-2185-3267/contactPoint> ;
+	dct:conformsTo <http://www.w3.org/ns/EMTCv2_Full_Dataset/APIDocumentation>;
+.
+
+<http://www.w3.org/ns/EMTCv2_Full_Dataset/APIDocumentation> a hydra:ApiDocumentation;
+      	hydra:title "test" ;
+      	hydra:description "Documentation for the fdsnws-event webservice" ;
+      	hydra:entrypoint "Web Services documentation and metadata for EMTC"^^xsd:anyURI ;
+.
+
+
+#
+#   -------------------------------- Operations --------------------------------
+#
+
+<http://www.w3.org/ns/Operation-EMTC_V2_Full_Dataset> a hydra:Operation;
+	hydra:method "GET"^^xsd:string;
+	hydra:returns "application/json";
+	hydra:property[ a hydra:IriTemplate;
+		hydra:template "https://tsunamiarchive.ingv.it/services/tsunami/wfs/wfs{?service, version, request, typeNames, outputFormat}"^^xsd:string;
+			hydra:mapping[ a hydra:IriTemplateMapping;
+				hydra:variable "service";
+				rdfs:range "xsd:string";
+				rdfs:label "Service";
+				http:paramValue "WFS" ;
+				schema:defaultValue "WFS";
+				hydra:required "true"^^xsd:boolean;
+			];
+			hydra:mapping[ a hydra:IriTemplateMapping;
+				hydra:variable "version"^^xsd:string;
+				rdfs:range "xsd:string";
+				rdfs:label "Service version";
+				schema:defaultValue "2.0.0" ;
+				http:paramValue "2.0.0" ;
+				http:paramValue "1.0.0" ;
+				http:paramValue "1.1.0" ;
+				hydra:required "true"^^xsd:boolean;
+			];
+		        hydra:mapping[ a hydra:IriTemplateMapping;
+				hydra:variable "request"^^xsd:string;
+				rdfs:range "xsd:string";
+				rdfs:label "Request Type";
+				schema:defaultValue "getFeature" ;
+				http:paramValue "getFeature" ;
+				hydra:required "true"^^xsd:boolean;
+			];
+			hydra:mapping[ a hydra:IriTemplateMapping;
+				hydra:variable "typeNames"^^xsd:string;
+				rdfs:range "xsd:string";
+				rdfs:label "Feature layer to load";
+				schema:defaultValue "tsunami:EMTC_v2" ;
+				http:paramValue "tsunami:EMTC_v2" ;
+				hydra:required "true"^^xsd:boolean;
+			];
+		        hydra:mapping[ a hydra:IriTemplateMapping;
+				hydra:variable "outputFormat"^^xsd:string;
+				rdfs:range "xsd:json";
+				rdfs:label "Output format";
+				schema:defaultValue "tsunami:EMTC_v2" ;
+				http:paramValue "SHAPE-ZIP" ;
+				http:paramValue "gml3" ;
+				http:paramValue "gml32";
+				http:paramValue "csv";
+				http:paramValue "excel"; 
+				http:paramValue "excel2007"; 
+				http:paramValue "json" ;
+				http:paramValue "KML" ;
+				hydra:required "true"^^xsd:boolean;
+			];
+			
+	];
+.
+
+#
+#   -------------------------------- Distributions --------------------------------
+#
+
+<http://www.w3.org/ns/EMTCv2_Full_Dataset> a dcat:Distribution;
+	dct:title "EMTC V2 Tsunami Catalogue Full Dataset (OGC WFS)";
+	dct:description "A unified catalogue containing tsunamis generated in the European and Mediterranean seas since 6150 B.C. to current days. The Catalogue of Euro-Mediterranean Tsunamis (EMTC2.0), realized in ArcGis online, contains 293 tsunamis and is the updated version of EMTC published in 2014.The Italian section of the database was revised in order to implement the new database of tsunami effects along the Italian coasts (ITED). In order to improve the quality of the data, all the Italian tsunamis of seismic origin have been linked to the Parametric Catalogue of Italian Earthquakes (CPTI15) adopted as the reference earthquake catalogue.In the EMTC2.0 two new tsunami events were added, more information enriched the knowledge on the tsunamis present in the Italian section and, accordingly to the new achieved info, some tsunami parameters, such as the reliability, intensity, generating cause, etc. have changed.ITED and EMTCv2 are interconnected and they can be accessed through a purpose-built WebApp that allows the user to easily switch from one database to another. EMTC is interoperable with the database of the Italian Archive of Historical Earthquake Data (ASMI).";
+	dct:identifier "http://www.w3.org/ns/EMTCv2_Full_Dataset";
+	dct:issued "2019-05-02T10:44:10Z"^^xsd:dateTime;
+	dct:modified "2022-07-19T10:44:11Z"^^xsd:dateTime;
+	dct:type "http://publications.europa.eu/resource/authority/distribution-type/WEB_SERVICE"^^xsd:anyURI;
+	dct:conformsTo <http://www.w3.org/ns/Tsunami/EMTC_v2>;
+	dcat:accessURL <http://www.w3.org/ns/Operation-EMTC_V2_Full_Dataset>;
+	dct:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI;
+	dct:format "http://publications.europa.eu/resource/authority/file-type/JSON"^^xsd:anyURI;
+.
